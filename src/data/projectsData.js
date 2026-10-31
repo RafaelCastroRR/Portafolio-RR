@@ -25,7 +25,7 @@ export const projects = [
     subtitle: "Plataforma FinTech empresarial para operaciones monetarias",
     category: "Full Stack",
     featured: true,
-    liveUrl: "https://novabank.xibalbadev.xyz", // O el subdominio que configure el usuario
+    liveUrl: "https://novabank.xibalbadev.xyz",
     githubUrl: "https://github.com/RafaelCastroRR/Nova-Bank",
     image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
     tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "2FA", "JWT", "Charts"],
@@ -40,60 +40,41 @@ export const projects = [
     ]
   },
   {
-    id: "anime-finder",
-    title: "Buscador de Anime Interactivo",
-    subtitle: "Catálogo y explorador de series con consumo de API REST",
-    category: "Frontend",
-    featured: false,
-    liveUrl: "https://github.com/RafaelCastroRR",
-    githubUrl: "https://github.com/RafaelCastroRR",
-    image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
-    tags: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
-    shortDesc: "Buscador ágil de series y películas anime con filtros en tiempo real, sinopsis detalladas, rankings y modo oscuro.",
-    fullDesc: "Aplicación frontend desarrollada para explorar miles de títulos de anime conectándose a APIs públicas. Incluye debouncing en el input de búsqueda, filtros por categoría y año, y modal con trailers y puntuaciones comunitarias.",
-    highlights: [
-      "Búsqueda instantánea con debouncing para reducir peticiones a la API",
-      "Filtros avanzados por género, estado de emisión y popularidad",
-      "Diseño responsivo optimizado para dispositivos móviles",
-      "Manejo elegante de estados de carga (skeletons) y errores"
-    ]
-  },
-  {
     id: "event-manager",
     title: "Administrador de Eventos & Recordatorios",
-    subtitle: "Herramienta de productividad y agenda de citas",
+    subtitle: "Herramienta de productividad y agenda de citas interactiva",
     category: "Frontend",
-    featured: false,
-    liveUrl: "https://github.com/RafaelCastroRR",
-    githubUrl: "https://github.com/RafaelCastroRR",
+    featured: true,
+    liveUrl: "https://eventos.xibalbadev.xyz",
+    githubUrl: "https://github.com/RafaelCastroRR/Proyect-Final-Ada",
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80",
-    tags: ["React", "JavaScript", "LocalStorage", "Chakra UI"],
-    shortDesc: "Gestor visual para programar eventos, reuniones y recordatorios importantes con calendario interactivo.",
-    fullDesc: "Sistema creado para la planificación personal y de equipos. Permite agendar eventos con fechas límite, etiquetas de prioridad, confirmación de asistencia y notificaciones emergentes.",
+    tags: ["React", "Chakra UI", "FullCalendar", "Vite", "JavaScript"],
+    shortDesc: "Gestor visual para programar eventos, reuniones y recordatorios importantes con calendario interactivo y filtros avanzados.",
+    fullDesc: "Sistema creado para la planificación personal y de equipos. Permite agendar eventos con fechas límite, etiquetas de prioridad, confirmación de asistencia y notificaciones emergentes con FullCalendar y Chakra UI.",
     highlights: [
-      "Calendario interactivo con vista mensual y semanal",
+      "Calendario interactivo con FullCalendar y vista dinámica mensual/semanal",
       "Categorización por colores y nivel de prioridad",
-      "Persistencia de datos y exportación de actividades",
-      "Interfaz limpia enfocada en minimizar fricción"
+      "Persistencia de datos y gestión de recordatorios",
+      "Interfaz limpia y moderna enfocada en minimizar fricción"
     ]
   },
   {
     id: "opinion-blog",
-    title: "Blog de Opiniones & Comunidad Tech",
-    subtitle: "Plataforma editorial con interacción comunitaria",
+    title: "Blog de Aprendizaje & Opiniones",
+    subtitle: "Plataforma de publicaciones técnicas con interacción comunitaria",
     category: "Full Stack",
-    featured: false,
-    liveUrl: "https://github.com/RafaelCastroRR",
-    githubUrl: "https://github.com/RafaelCastroRR",
+    featured: true,
+    liveUrl: "https://blog.xibalbadev.xyz",
+    githubUrl: "https://github.com/RafaelCastroRR/Learning-blog-Front",
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
-    tags: ["React", "Node.js", "Express", "Chakra UI", "MongoDB"],
-    shortDesc: "Portal para compartir opiniones, tutoriales y debates técnicos con sistema de comentarios y votaciones.",
-    fullDesc: "Plataforma de contenido colaborativo donde desarrolladores pueden publicar artículos de interés, recibir feedback constructivo y debatir en hilos de conversación.",
+    tags: ["React", "Node.js", "Express", "Chakra UI", "MongoDB Atlas"],
+    shortDesc: "Portal para compartir opiniones, tutoriales y artículos técnicos con sistema de comentarios y base de datos distribuida.",
+    fullDesc: "Plataforma de contenido colaborativo desarrollada bajo arquitectura MERN donde usuarios pueden publicar opiniones y artículos de interés, interactuar en hilos de comentarios y clasificar temas.",
     highlights: [
-      "Editor de artículos con soporte de formato enriquecido",
-      "Hilos de comentarios anidados y reacciones en tiempo real",
-      "Módulo de búsqueda por etiquetas tecnológicas",
-      "Control de roles para moderación de contenido"
+      "Arquitectura MERN completa (MongoDB Atlas, Express, React, Node)",
+      "Sistema de comentarios dinámicos asociados a publicaciones",
+      "API REST con rutas modulares y controladores desacoplados",
+      "Diseño responsivo con Chakra UI y animaciones fluidas"
     ]
   }
 ];
