@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, ExternalLink, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 import { projects } from '../data/projectsData';
 
@@ -13,33 +13,32 @@ export default function Projects({ onSelectProject }) {
     : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="proyectos" className="py-20 md:py-32 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-xs font-mono text-cyan-400 uppercase tracking-wider mb-3">
-            <Briefcase className="w-3.5 h-3.5" />
-            Portafolio de Trabajo
+    <section id="proyectos" className="py-24 border-t border-white/5 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header & Filters */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span className="text-xs font-mono text-sky-400 uppercase tracking-widest block mb-2">
+              Portafolio
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+              Proyectos Destacados
+            </h2>
+            <p className="mt-2 text-sm text-neutral-400 max-w-xl font-normal">
+              Aplicaciones completas en producción, plataformas web, APIs REST y software de escritorio.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Mis Proyectos Desarrollados
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400">
-            Sistemas completos en producción, aplicaciones web interactivas, servicios backend, apps móviles y software de escritorio.
-          </p>
-        </div>
 
-        {/* Filter Pills */}
-        <div className="flex justify-center mb-12">
-          <div className="flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl bg-slate-900/80 border border-slate-800 max-w-3xl">
+          {/* Segmented Filter Control */}
+          <div className="flex flex-wrap gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/10 self-start md:self-auto">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   filter === cat
-                    ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                    ? 'bg-white text-neutral-950 font-semibold shadow-sm'
+                    : 'text-neutral-400 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {cat}
@@ -49,7 +48,7 @@ export default function Projects({ onSelectProject }) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => {
             const isFeatured = project.featured;
             const hasLiveApp = project.liveUrl && !project.liveUrl.includes('github.com');
@@ -57,70 +56,67 @@ export default function Projects({ onSelectProject }) {
             return (
               <div
                 key={project.id}
-                className={`flex flex-col rounded-2xl overflow-hidden bg-slate-900/60 border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl ${
-                  isFeatured 
-                    ? 'border-cyan-500/40 hover:border-cyan-400 hover:shadow-cyan-500/10' 
-                    : 'border-slate-800/80 hover:border-slate-700 hover:shadow-black/40'
-                }`}
+                className="group flex flex-col rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 flex-1"
               >
-                {/* Image & Badges */}
-                <div className="relative h-52 w-full overflow-hidden group">
+                {/* Image & Status Badge */}
+                <div className="relative h-48 w-full overflow-hidden bg-neutral-900">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-transparent to-transparent" />
 
-                  {isFeatured && (
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-950/90 text-cyan-300 border border-cyan-500/50 shadow-md backdrop-blur-md">
-                      <Sparkles className="w-3 h-3 text-cyan-400" />
-                      Producción / En Vivo
-                    </div>
-                  )}
-
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                    <span className="px-2.5 py-0.5 rounded-md text-xs font-mono font-medium bg-slate-900/90 text-slate-300 border border-slate-700/80 backdrop-blur-sm">
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                    <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-black/70 text-neutral-300 border border-white/10 backdrop-blur-md">
                       {project.category}
                     </span>
+
+                    {isFeatured && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 backdrop-blur-md">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        En Vivo
+                      </span>
+                    )}
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                {/* Card Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">
+                    <h3 className="text-base font-bold text-white mb-1.5 group-hover:text-sky-300 transition">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-slate-400 line-clamp-3 leading-relaxed mb-4">
+                    <p className="text-xs text-neutral-400 line-clamp-3 leading-relaxed mb-4 font-normal">
                       {project.shortDesc}
                     </p>
 
                     {/* Tech Badges */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
-                      {project.tags.slice(0, 4).map((tag) => (
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {project.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-800/80 text-cyan-300/90 border border-slate-700/60"
+                          className="px-2 py-0.5 rounded text-[10px] font-mono bg-white/5 text-neutral-300 border border-white/5"
                         >
                           {tag}
                         </span>
                       ))}
-                      {project.tags.length > 4 && (
-                        <span className="px-2 py-0.5 rounded-md text-xs font-mono bg-slate-800/40 text-slate-400">
-                          +{project.tags.length - 4}
+                      {project.tags.length > 3 && (
+                        <span className="px-1.5 py-0.5 rounded text-[10px] font-mono text-neutral-500">
+                          +{project.tags.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
+                  <div className="pt-3 border-t border-white/5 flex items-center justify-between">
                     <button
                       onClick={() => onSelectProject(project)}
-                      className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1"
+                      className="text-xs font-medium text-neutral-300 hover:text-white flex items-center gap-1 transition"
                     >
-                      Ver Detalles →
+                      <span>Detalles</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500" />
                     </button>
 
                     <div className="flex items-center gap-2">
@@ -128,7 +124,7 @@ export default function Projects({ onSelectProject }) {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition"
+                        className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 transition"
                         title="Ver Código en GitHub"
                       >
                         <GithubIcon className="w-4 h-4" />
@@ -139,11 +135,11 @@ export default function Projects({ onSelectProject }) {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition shadow-sm"
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-white text-neutral-950 hover:bg-neutral-200 transition"
                           title="Visitar Proyecto en Vivo"
                         >
                           <span>En Vivo</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
+                          <ExternalLink className="w-3 h-3" />
                         </a>
                       )}
                     </div>

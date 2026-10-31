@@ -15,7 +15,7 @@ export default function App() {
   const [isCvOpen, setIsCvOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#090a0f] text-neutral-100 flex flex-col font-sans selection:bg-sky-500/20 selection:text-sky-300">
       <Navbar onOpenCvModal={() => setIsCvOpen(true)} />
       
       <main className="flex-1">

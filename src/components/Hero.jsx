@@ -1,97 +1,86 @@
 import React from 'react';
-import { ArrowRight, ExternalLink, Sparkles, Terminal, FileText, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, FileText, ArrowUpRight } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 
 export default function Hero({ onOpenCvModal }) {
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-      {/* Background glowing orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-cyan-500/15 via-indigo-500/15 to-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section id="inicio" className="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-grid-subtle">
+      {/* Subtle Ambient Light */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      {/* Grid Pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono text-cyan-300 mb-8 shadow-inner shadow-cyan-950 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span className="w-2 h-2 -ml-3.5 rounded-full bg-emerald-400" />
-            <span>Disponible para nuevos proyectos & retos</span>
-            <span className="text-slate-500">•</span>
-            <span className="text-slate-400">Guatemala 🇬🇹</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-neutral-300 mb-8 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Disponible para nuevos proyectos</span>
+            <span className="text-neutral-600">•</span>
+            <span className="text-neutral-400">Guatemala 🇬🇹</span>
           </div>
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
-            Hola, soy <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">Rafael Castro</span>
+            Rafael Castro
           </h1>
 
-          {/* Subtitle / Role */}
-          <p className="text-xl sm:text-2xl font-semibold text-slate-300 mb-6 flex items-center justify-center gap-2 flex-wrap font-mono">
-            <Terminal className="w-5 h-5 text-cyan-400" />
-            <span>Frontend & Full Stack Developer</span>
+          {/* Role */}
+          <p className="text-xl sm:text-2xl font-semibold text-neutral-300 mb-6 tracking-tight">
+            Desarrollador Full Stack & Frontend
           </p>
 
-          {/* Signature Quote */}
-          <div className="max-w-2xl mx-auto my-6 p-4 rounded-2xl bg-slate-900/40 border border-cyan-500/20 backdrop-blur-sm shadow-xl">
-            <p className="text-lg md:text-xl italic text-cyan-200 font-serif">
-              &ldquo;Donde otros ven límites, yo escribo soluciones.&rdquo;
-            </p>
-          </div>
-
-          {/* Bio paragraph */}
-          <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
-            Especializado en la creación de interfaces web modernas, reactivas y de alto rendimiento. 
-            Combino atención minuciosa al detalle visual en <span className="text-slate-200 font-medium">React</span> con arquitecturas robustas y seguras en <span className="text-slate-200 font-medium">Node.js y bases de datos</span>.
+          {/* Professional Narrative */}
+          <p className="text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+            Diseño y construyo aplicaciones web interactivas, arquitecturas de backend y herramientas que resuelven necesidades reales. Graduado de <span className="text-neutral-200 font-medium">Fundación Kinal</span> y certificado en React por <span className="text-neutral-200 font-medium">Ada School</span>, enfocado en código limpio, buen rendimiento y despliegues sólidos.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          {/* CTA Row */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-16">
             <a
               href="#proyectos"
-              className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-neutral-950 bg-white hover:bg-neutral-200 transition shadow-lg shadow-white/10"
             >
-              Explorar Proyectos
-              <ArrowRight className="w-4 h-4" />
+              <span>Ver Proyectos</span>
+              <ArrowDown className="w-4 h-4" />
             </a>
 
             <button
               onClick={onOpenCvModal}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-slate-900 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 shadow-md transition-all duration-200 hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/10 transition"
             >
-              <FileText className="w-4 h-4 text-cyan-400" />
-              Ver Currículum
+              <FileText className="w-4 h-4 text-sky-400" />
+              <span>Currículum Vitae</span>
             </button>
 
             <a
               href="https://github.com/RafaelCastroRR"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-300 hover:text-white bg-slate-900/50 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-medium text-neutral-300 hover:text-white bg-transparent hover:bg-white/5 border border-white/10 transition"
             >
               <GithubIcon className="w-4 h-4" />
-              GitHub
+              <span>GitHub</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500" />
             </a>
           </div>
 
-          {/* Quick Metrics */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-8 border-t border-slate-800/80">
-            <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-left">
-              <div className="text-2xl md:text-3xl font-extrabold text-cyan-400 font-mono">Graduado</div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 font-medium mt-1">Perito en Informática (Kinal)</div>
+          {/* Key Facts / Highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-8 border-t border-white/5 text-left">
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <span className="text-xs font-mono text-sky-400 block mb-0.5">Educación</span>
+              <span className="text-sm font-semibold text-white block">Perito en Informática</span>
+              <span className="text-xs text-neutral-500">Fundación Kinal (Graduado)</span>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-left">
-              <div className="text-2xl md:text-3xl font-extrabold text-teal-400 font-mono">React Cert.</div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 font-medium mt-1">Middle Dev por Ada School</div>
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <span className="text-xs font-mono text-sky-400 block mb-0.5">Certificación</span>
+              <span className="text-sm font-semibold text-white block">Middle React Dev</span>
+              <span className="text-xs text-neutral-500">Ada School (Aprobado)</span>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-left">
-              <div className="text-2xl md:text-3xl font-extrabold text-purple-400 font-mono">Full Stack</div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 font-medium mt-1">Sistemas Cloud & Linux Server</div>
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <span className="text-xs font-mono text-sky-400 block mb-0.5">Infraestructura</span>
+              <span className="text-sm font-semibold text-white block">Servidores en Producción</span>
+              <span className="text-xs text-neutral-500">Linux • Nginx • Cloudflare</span>
             </div>
           </div>
         </div>

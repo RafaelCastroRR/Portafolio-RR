@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Calendar, CheckCircle2, BookOpen } from 'lucide-react';
+import { GraduationCap, Award, Calendar, CheckCircle2 } from 'lucide-react';
 
 export default function Education() {
   const experiences = [
@@ -9,12 +9,12 @@ export default function Education() {
       institution: "Fundación Kinal",
       period: "3 Años Completados",
       status: "Graduado / Egresado",
-      description: "Formación técnica rigurosa de 3 años culminada exitosamente, con enfoque en ingeniería de software, arquitectura de sistemas, algoritmia avanzada, desarrollo web full stack y gestión de bases de datos relacionales y NoSQL. Durante mi trayectoria en Kinal desarrollé múltiples proyectos de alta exigencia, consolidando un pensamiento analítico disciplinado y capacidad resolutiva ante problemas reales.",
+      description: "Formación técnica rigurosa de 3 años culminada con éxito, orientada a la ingeniería de software, arquitectura de sistemas, algoritmia avanzada, desarrollo web full stack y administración de bases de datos relacionales y NoSQL. Desarrollo de proyectos con altos estándares de la industria y resolución de problemas empresariales.",
       highlights: [
         "Graduado de la carrera técnica de Perito en Informática",
-        "Desarrollo de aplicaciones completas con JavaScript, React, Java y Node.js",
-        "Diseño de bases de datos relacionales (MySQL) y no relacionales (MongoDB)",
-        "Implementación de patrones de arquitectura (MVC), POO y buenas prácticas"
+        "Desarrollo de proyectos con JavaScript, React, Java y Node.js",
+        "Diseño e implementación de bases de datos con MySQL y MongoDB",
+        "Patrones arquitectónicos (MVC), Programación Orientada a Objetos y Clean Code"
       ]
     },
     {
@@ -23,76 +23,74 @@ export default function Education() {
       institution: "Ada School",
       period: "Certificación Oficial",
       status: "Certificado Aprobado",
-      description: "Programa intensivo y especializado en arquitectura frontend moderna. Profundización en mejores prácticas de ingeniería de software con React, hooks avanzados, optimización de renderizados y desarrollo modular para preparar mi perfil para roles profesionales de alta exigencia.",
+      description: "Programa intensivo y especializado en arquitectura frontend moderna. Profundización en patrones de diseño en React, custom hooks, optimización de renderizados y desarrollo modular para preparar mi perfil para roles profesionales de alta exigencia.",
       highlights: [
         "Patrones de diseño modernos en React y manejo de ciclo de vida",
         "Arquitecturas escalables de estado y consumo asíncrono de APIs REST",
         "Testing, depuración de errores y control de calidad de código",
-        "Buenas prácticas de Clean Code y desarrollo guiado por componentes"
+        "Buenas prácticas de desarrollo guiado por componentes"
       ]
     }
   ];
 
   return (
-    <section id="educacion" className="py-20 md:py-32 bg-slate-950/70 border-y border-slate-900 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/60 text-xs font-mono text-emerald-400 uppercase tracking-wider mb-3">
-            <GraduationCap className="w-3.5 h-3.5" />
-            Trayectoria Académica
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Educación y Certificaciones
+    <section id="educacion" className="py-24 border-t border-white/5 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mb-14">
+          <span className="text-xs font-mono text-sky-400 uppercase tracking-widest block mb-2">
+            Trayectoria
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
+            Educación & Certificaciones
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-400">
-            Bases técnicas sólidas construidas con estudio constante, títulos culminados y certificaciones oficiales.
+          <p className="mt-2 text-sm text-neutral-400 max-w-xl font-normal">
+            Bases técnicas sólidas construidas con formación técnica culminada y certificaciones oficiales.
           </p>
         </div>
 
-        {/* Education Timeline Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Education Timeline */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700/80 transition-all duration-300 relative flex flex-col justify-between"
+              className="p-7 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-800/60">
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-white/5 text-neutral-300 border border-white/5">
                     {exp.type}
                   </span>
-                  <span className="flex items-center gap-1.5 text-xs text-slate-400 font-mono">
-                    <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                  <span className="text-xs text-neutral-500 font-mono">
                     {exp.period}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-1">
+                <h3 className="text-lg font-bold text-white mb-1">
                   {exp.title}
                 </h3>
 
-                <h4 className="text-sm font-semibold text-cyan-400 mb-4 flex items-center gap-1.5">
-                  <Award className="w-4 h-4" />
+                <h4 className="text-xs font-semibold text-sky-400 mb-4 flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5" />
                   {exp.institution}
                 </h4>
 
-                <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6 font-normal">
                   {exp.description}
                 </p>
 
-                <div className="space-y-2 pt-4 border-t border-slate-800/80">
+                <div className="space-y-2 pt-4 border-t border-white/5">
                   {exp.highlights.map((h, i) => (
-                    <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0" />
+                    <div key={i} className="flex items-start gap-2 text-xs text-neutral-400">
+                      <span className="w-1 h-1 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
                       <span>{h}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
-                <span>Estado:</span>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+                <span className="text-neutral-500">Estado:</span>
                 <span className="text-emerald-400 font-semibold">{exp.status}</span>
               </div>
             </div>

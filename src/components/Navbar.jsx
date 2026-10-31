@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2, ExternalLink, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export default function Navbar({ onOpenCvModal }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function Navbar({ onOpenCvModal }) {
 
   const navLinks = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Quién Soy', href: '#sobre-mi' },
+    { name: 'Perfil', href: '#sobre-mi' },
     { name: 'Habilidades', href: '#habilidades' },
     { name: 'Proyectos', href: '#proyectos' },
     { name: 'Educación', href: '#educacion' },
@@ -23,100 +23,95 @@ export default function Navbar({ onOpenCvModal }) {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-black/20' : 'bg-transparent py-5'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6 pt-4 sm:pt-6">
+      <div className={`max-w-5xl mx-auto transition-all duration-300 rounded-full border ${
+        scrolled 
+          ? 'bg-[#0f121ae6] border-white/10 shadow-2xl shadow-black/60 backdrop-blur-xl py-2.5 px-5 sm:px-6' 
+          : 'bg-[#0f121a80] border-white/5 backdrop-blur-md py-3 px-5 sm:px-6'
+      }`}>
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo / Monogram */}
           <a href="#inicio" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-500 p-0.5 shadow-md shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <Code2 className="w-5 h-5 text-cyan-400 group-hover:rotate-12 transition-transform duration-300" />
-              </div>
-            </div>
-            <div>
-              <span className="text-lg font-bold text-white tracking-tight flex items-center gap-1.5">
+            <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center font-mono text-xs font-bold text-sky-400 group-hover:border-sky-400/50 group-hover:bg-sky-500/10 transition-all">
+              RC
+            </span>
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold tracking-tight text-white group-hover:text-sky-300 transition">
                 Rafael Castro
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
               </span>
-              <span className="text-xs text-slate-400 font-mono tracking-wider block -mt-0.5">
-                PORTAFOLIO // DEV
+              <span className="text-[10px] text-neutral-400 font-mono -mt-0.5">
+                Full Stack Developer
               </span>
             </div>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800 backdrop-blur-md">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-4 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-full transition-all duration-200"
+                className="px-3.5 py-1.5 text-xs font-medium text-neutral-300 hover:text-white hover:bg-white/5 rounded-full transition-all"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          {/* Action Button */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center gap-2.5">
             <button
               onClick={onOpenCvModal}
-              className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-300 bg-cyan-950/50 hover:bg-cyan-900/60 border border-cyan-800/60 hover:border-cyan-500 rounded-lg transition-all duration-200 shadow-sm shadow-cyan-950"
+              className="px-3.5 py-1.5 text-xs font-medium text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-full transition"
             >
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-              Ver CV
+              CV
             </button>
             <a
               href="#contacto"
-              className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 rounded-lg transition-all duration-200 font-mono shadow-md shadow-cyan-500/20"
+              className="px-4 py-1.5 text-xs font-semibold text-neutral-950 bg-white hover:bg-neutral-200 rounded-full transition shadow-sm"
             >
-              Hablemos
+              Contactar
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800 transition"
+            className="md:hidden p-1.5 rounded-full text-neutral-400 hover:text-white hover:bg-white/5 transition"
             aria-label="Abrir menú"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-cyan-400" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-3 pb-6 backdrop-blur-xl animate-in slide-in-from-top-4 duration-200">
-          <div className="flex flex-col gap-2">
+        <div className="md:hidden mt-3 max-w-sm mx-auto bg-[#0f121af0] border border-white/10 rounded-2xl p-4 shadow-2xl backdrop-blur-2xl animate-in fade-in duration-200">
+          <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-2.5 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-900 transition"
+                className="px-4 py-2 rounded-xl text-sm font-medium text-neutral-300 hover:text-white hover:bg-white/5 transition"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-3 border-t border-slate-800 flex flex-col gap-2">
+            <div className="pt-3 mt-2 border-t border-white/10 flex gap-2">
               <button
-                onClick={() => {
-                  setIsOpen(false);
-                  onOpenCvModal();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-800 rounded-lg"
+                onClick={() => { setIsOpen(false); onOpenCvModal(); }}
+                className="flex-1 py-2 text-xs font-semibold text-neutral-200 bg-white/5 border border-white/10 rounded-xl transition text-center"
               >
-                <Sparkles className="w-4 h-4" /> Ver Currículum
+                Ver CV
               </button>
               <a
                 href="#contacto"
                 onClick={() => setIsOpen(false)}
-                className="w-full text-center py-2.5 text-sm font-semibold text-slate-950 bg-cyan-400 rounded-lg"
+                className="flex-1 py-2 text-xs font-bold text-neutral-950 bg-white rounded-xl transition text-center"
               >
-                Contáctame
+                Contacto
               </a>
             </div>
           </div>
