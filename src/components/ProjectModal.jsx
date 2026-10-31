@@ -5,6 +5,8 @@ import GithubIcon from './GithubIcon';
 export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
 
+  const hasLiveApp = project.liveUrl && !project.liveUrl.includes('github.com');
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
@@ -97,11 +99,11 @@ export default function ProjectModal({ project, onClose }) {
                 className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition"
               >
                 <GithubIcon className="w-4 h-4" />
-                Repositorio
+                Código en GitHub
               </a>
             )}
 
-            {project.liveUrl && (
+            {hasLiveApp && (
               <a
                 href={project.liveUrl}
                 target="_blank"

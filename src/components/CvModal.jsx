@@ -43,7 +43,7 @@ export default function CvModal({ isOpen, onClose }) {
               Perfil Profesional
             </h4>
             <p className="leading-relaxed text-slate-300">
-              Programador Frontend y Full Stack enfocado en el desarrollo de aplicaciones web reactivas, escalables y seguras. Con sólida base en fundamentos de software por Fundación Kinal y certificación profesional en React por Ada School. Experiencia demostrada en sistemas de reservaciones hoteleras, plataformas bancarias digitales y despliegue en entornos Linux de producción.
+              Programador Frontend y Full Stack enfocado en el desarrollo de aplicaciones web reactivas, escalables y seguras. Graduado con título de Perito en Informática por Fundación Kinal y certificación profesional en React por Ada School. Experiencia demostrada en sistemas de reservaciones hoteleras, plataformas bancarias digitales, microservicios empresariales y despliegue en servidores Linux de producción.
             </p>
           </div>
 
@@ -57,13 +57,13 @@ export default function CvModal({ isOpen, onClose }) {
               <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h5 className="font-bold text-white">Carrera de Programación (3 Años)</h5>
+                    <h5 className="font-bold text-white">Perito en Informática (3 Años)</h5>
                     <p className="text-xs text-cyan-400">Fundación Kinal</p>
                   </div>
-                  <span className="text-xs font-mono text-slate-500">Cursando</span>
+                  <span className="text-xs font-mono text-emerald-400 font-semibold">Graduado / Egresado</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-2">
-                  Especialización en desarrollo web, algoritmia, bases de datos relacionales y NoSQL, POO y diseño de sistemas.
+                  Formación completa y culminada en ingeniería de software, arquitectura web, estructuras de datos, algoritmia, POO y administración de bases de datos relacionales (MySQL) y NoSQL (MongoDB).
                 </p>
               </div>
 
@@ -73,7 +73,7 @@ export default function CvModal({ isOpen, onClose }) {
                     <h5 className="font-bold text-white">Middle Developer Front End JavaScript - React</h5>
                     <p className="text-xs text-emerald-400">Ada School</p>
                   </div>
-                  <span className="text-xs font-mono text-emerald-400">Certificado</span>
+                  <span className="text-xs font-mono text-emerald-400 font-semibold">Certificado Aprobado</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-2">
                   Especialización avanzada en React, hooks personalizados, ciclo de vida, consumo de APIs REST y patrones limpios de arquitectura.
@@ -99,7 +99,21 @@ export default function CvModal({ isOpen, onClose }) {
               <div className="p-3.5 rounded-xl bg-slate-950/40 border border-slate-800">
                 <h5 className="font-bold text-white text-xs">Nova Bank - Sistema Bancario Digital</h5>
                 <p className="text-xs text-slate-400 mt-1">
-                  Stack: React, Tailwind CSS, Node.js, Express, MongoDB, 2FA, JWT, Gráficos analíticos.
+                  Stack: React, Tailwind CSS, Node.js, Express, MongoDB, 2FA, JWT, Gráficas interactivas.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-slate-950/40 border border-slate-800">
+                <h5 className="font-bold text-white text-xs">Eventos & Recordatorios - Gestor de Productividad</h5>
+                <p className="text-xs text-slate-400 mt-1">
+                  Stack: React, FullCalendar, Chakra UI, Vite, LocalStorage.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-slate-950/40 border border-slate-800">
+                <h5 className="font-bold text-white text-xs">Blog de Aprendizaje & Opiniones - Plataforma MERN</h5>
+                <p className="text-xs text-slate-400 mt-1">
+                  Stack: MongoDB Atlas, Express, React, Node.js, Chakra UI, Comentarios dinámicos.
                 </p>
               </div>
             </div>
@@ -108,33 +122,35 @@ export default function CvModal({ isOpen, onClose }) {
           {/* Habilidades Principales */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 font-mono flex items-center gap-2">
-              <Award className="w-4 h-4 text-purple-400" />
-              Competencias Técnicas
+              <CheckCircle2 className="w-4 h-4 text-teal-400" />
+              Habilidades Técnicas Principales
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {['JavaScript (ES6+)', 'React.js', 'React Native', 'Tailwind CSS', 'Chakra UI', 'Node.js', 'Express', 'MongoDB', 'MySQL', 'Git & GitHub', 'Linux', 'Nginx', 'Cloudflare Zero Trust'].map((skill) => (
-                <span key={skill} className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-200 border border-slate-700">
-                  {skill}
-                </span>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">JavaScript (ES6+)</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">React & Vite</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">React Native (Mobile)</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">Node.js & Express</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">MongoDB & Atlas</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">Java & JavaFX (MVC)</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">MySQL & JDBC</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">Tailwind & Chakra UI</span>
+              <span className="p-2 rounded-lg bg-slate-950/40 border border-slate-800 text-slate-300">Linux, Nginx & PM2</span>
             </div>
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="p-6 bg-slate-950 border-t border-slate-800 flex justify-end gap-3">
+        {/* Footer */}
+        <div className="p-6 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
+          <p className="text-xs text-slate-500 font-mono">
+            Actualizado • Octubre 2026
+          </p>
           <button
-            onClick={onClose}
-            className="px-5 py-2.5 text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 rounded-xl transition"
+            onClick={() => window.print()}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition"
           >
-            Cerrar
+            <Download className="w-4 h-4" />
+            Imprimir / Guardar PDF
           </button>
-          <a
-            href="mailto:rafaelcastro.dev@gmail.com?subject=Contacto%20desde%20Portafolio%20de%20Rafael%20Castro"
-            className="px-6 py-2.5 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition font-mono"
-          >
-            Contactar por Correo
-          </a>
         </div>
       </div>
     </div>

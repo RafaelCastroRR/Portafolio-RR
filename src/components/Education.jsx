@@ -5,16 +5,16 @@ export default function Education() {
   const experiences = [
     {
       type: "Educación Técnica Superior",
-      title: "Carrera de Programación (3 Años)",
+      title: "Perito en Informática (3 Años)",
       institution: "Fundación Kinal",
-      period: "Formación de 3 Años",
-      status: "Cursando actualmente",
-      description: "Formación rigurosa centrada en desarrollo de software, diseño de sistemas, algoritmia, programación web y gestión de bases de datos. Durante mi trayectoria en Kinal he desarrollado proyectos prácticos aplicados a entornos reales, fortaleciendo el pensamiento analítico y la capacidad de resolver problemas complejos.",
+      period: "3 Años Completados",
+      status: "Graduado / Egresado",
+      description: "Formación técnica rigurosa de 3 años culminada exitosamente, con enfoque en ingeniería de software, arquitectura de sistemas, algoritmia avanzada, desarrollo web full stack y gestión de bases de datos relacionales y NoSQL. Durante mi trayectoria en Kinal desarrollé múltiples proyectos de alta exigencia, consolidando un pensamiento analítico disciplinado y capacidad resolutiva ante problemas reales.",
       highlights: [
-        "Desarrollo de aplicaciones completas con JavaScript, HTML5, CSS3",
-        "Estructuras de datos y programación orientada a objetos (POO)",
-        "Diseño e implementación de bases de datos relacionales (MySQL) y NoSQL",
-        "Metodologías de trabajo ágil y colaboración en equipo técnico"
+        "Graduado de la carrera técnica de Perito en Informática",
+        "Desarrollo de aplicaciones completas con JavaScript, React, Java y Node.js",
+        "Diseño de bases de datos relacionales (MySQL) y no relacionales (MongoDB)",
+        "Implementación de patrones de arquitectura (MVC), POO y buenas prácticas"
       ]
     },
     {
@@ -26,7 +26,7 @@ export default function Education() {
       description: "Programa intensivo y especializado en arquitectura frontend moderna. Profundización en mejores prácticas de ingeniería de software con React, hooks avanzados, optimización de renderizados y desarrollo modular para preparar mi perfil para roles profesionales de alta exigencia.",
       highlights: [
         "Patrones de diseño modernos en React y manejo de ciclo de vida",
-        "Arquitecturas escalables de estado y consumo asíncrono de APIs",
+        "Arquitecturas escalables de estado y consumo asíncrono de APIs REST",
         "Testing, depuración de errores y control de calidad de código",
         "Buenas prácticas de Clean Code y desarrollo guiado por componentes"
       ]
@@ -46,7 +46,7 @@ export default function Education() {
             Educación y Certificaciones
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-400">
-            Bases técnicas sólidas construidas con estudio constante, certificaciones reconocidas y práctica continua.
+            Bases técnicas sólidas construidas con estudio constante, títulos culminados y certificaciones oficiales.
           </p>
         </div>
 

@@ -80,8 +80,8 @@ export default function Hero({ onOpenCvModal }) {
           {/* Quick Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-8 border-t border-slate-800/80">
             <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-left">
-              <div className="text-2xl md:text-3xl font-extrabold text-cyan-400 font-mono">3 Años</div>
-              <div className="text-xs uppercase tracking-wider text-slate-400 font-medium mt-1">Formación en Fundación Kinal</div>
+              <div className="text-2xl md:text-3xl font-extrabold text-cyan-400 font-mono">Graduado</div>
+              <div className="text-xs uppercase tracking-wider text-slate-400 font-medium mt-1">Perito en Informática (Kinal)</div>
             </div>
 
             <div className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-left">
