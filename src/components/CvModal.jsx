@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Download, FileText, CheckCircle2, GraduationCap, Award, Briefcase, Mail, MapPin } from 'lucide-react';
+import { X, Download, FileText, CheckCircle2, GraduationCap, Award, Briefcase, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function CvModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -22,7 +22,8 @@ export default function CvModal({ isOpen, onClose }) {
             </p>
             <div className="flex flex-wrap gap-4 mt-3 text-xs text-neutral-400">
               <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neutral-500" /> Guatemala</span>
-              <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-neutral-500" /> rafaelcastro.dev@gmail.com</span>
+              <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-neutral-500" /> +502 3632-3559</span>
+              <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-neutral-500" /> rafaelcastro0605@gmail.com</span>
             </div>
           </div>
 

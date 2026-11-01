@@ -1,8 +1,11 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 
 export default function Footer({ onOpenCvModal }) {
+  const emailAddress = "rafaelcastro0605@gmail.com";
+  const whatsappUrl = "https://wa.me/50236323559";
+
   return (
     <footer className="border-t border-white/5 py-12 text-neutral-400 text-xs font-normal">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +32,7 @@ export default function Footer({ onOpenCvModal }) {
             <a href="#contacto" className="hover:text-white transition">Contacto</a>
           </div>
 
-          {/* Socials */}
+          {/* Socials & Direct Links */}
           <div className="flex items-center gap-3">
             <a
               href="https://github.com/RafaelCastroRR"
@@ -37,15 +40,27 @@ export default function Footer({ onOpenCvModal }) {
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-white/[0.02] hover:bg-white/[0.08] text-neutral-400 hover:text-white transition border border-white/5"
               aria-label="GitHub"
+              title="GitHub: @RafaelCastroRR"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
-              href="mailto:rafaelcastro.dev@gmail.com"
+              href={`mailto:${emailAddress}`}
               className="p-2 rounded-lg bg-white/[0.02] hover:bg-white/[0.08] text-neutral-400 hover:text-white transition border border-white/5"
               aria-label="Correo"
+              title={`Correo: ${emailAddress}`}
             >
               <Mail className="w-4 h-4" />
+            </a>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-white/[0.02] hover:bg-white/[0.08] text-emerald-400 hover:text-emerald-300 transition border border-white/5"
+              aria-label="WhatsApp"
+              title="WhatsApp: +502 3632-3559"
+            >
+              <Phone className="w-4 h-4" />
             </a>
           </div>
         </div>
