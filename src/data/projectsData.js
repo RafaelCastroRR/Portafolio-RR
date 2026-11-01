@@ -39,44 +39,6 @@ export const projects = [
     ]
   },
   {
-    id: "event-manager",
-    title: "Task & Event Manager",
-    subtitle: "Administrador de Eventos y Calendario",
-    category: "Frontend",
-    featured: true,
-    liveUrl: "https://eventos.xibalbadev.xyz",
-    githubUrl: "https://github.com/RafaelCastroRR/Proyect-Final-Ada",
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80",
-    tags: ["React", "Chakra UI", "FullCalendar", "Vite", "JavaScript"],
-    shortDesc: "Herramienta de productividad personal con calendario dinámico, categorización por colores, prioridades y sistema de recordatorios.",
-    fullDesc: "Aplicación interactiva creada para la organización de eventos y tareas. Integra FullCalendar para visualización mensual y semanal, creación rápida de compromisos, filtros por etiquetas (trabajo, personal, reuniones) y almacenamiento local sin pérdida de información.",
-    highlights: [
-      "Integración completa con FullCalendar para vistas mensual y semanal",
-      "Sistema de filtrado dinámico por prioridad y categoría",
-      "Gestión de recordatorios con notificaciones visuales",
-      "Persistencia de datos en el navegador y arquitectura modular"
-    ]
-  },
-  {
-    id: "opinion-blog",
-    title: "Dev Learning Blog",
-    subtitle: "Blog Técnico y Espacio de Opinión",
-    category: "Full Stack",
-    featured: true,
-    liveUrl: "https://blog.xibalbadev.xyz",
-    githubUrl: "https://github.com/RafaelCastroRR/Learning-blog-Front",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Stack MERN", "React", "Node.js", "Express", "MongoDB Atlas", "Chakra UI"],
-    shortDesc: "Plataforma de publicaciones académicas y técnicas con arquitectura MERN, hilos de comentarios en vivo y base de datos en la nube.",
-    fullDesc: "Blog colaborativo construido con el stack MERN (MongoDB, Express, React, Node.js). Los usuarios pueden explorar publicaciones técnicas clasificadas por asignaturas de ingeniería, redactar nuevos posts y participar en hilos de discusión interactivos.",
-    highlights: [
-      "Arquitectura MERN completa con API REST desacoplada",
-      "Sistema de comentarios relacionados por identificador de post",
-      "Conexión a MongoDB Atlas con esquema estructurado en Mongoose",
-      "Interfaz adaptable a modo claro y oscuro con Chakra UI"
-    ]
-  },
-  {
     id: "coperex",
     title: "COPEREX Interfer",
     subtitle: "Sistema de Registro de Socios y Stands",
@@ -188,25 +150,6 @@ export const projects = [
       "Interfaz gráfica con formularios validados en JavaFX",
       "Persistencia de datos en MySQL mediante JDBC",
       "Cálculo automatizado de penalizaciones por devolución fuera de fecha"
-    ]
-  },
-  {
-    id: "jakarta-ee-products",
-    title: "Catálogo Jakarta EE",
-    subtitle: "Gestor Web de Productos con Servlets y JSP",
-    category: "Desktop & Java",
-    featured: false,
-    liveUrl: "https://github.com/RafaelCastroRR/Primera-Practica-Jakarta",
-    githubUrl: "https://github.com/RafaelCastroRR/Primera-Practica-Jakarta",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Java", "Jakarta EE", "Servlets", "JSP", "Apache Tomcat", "MVC"],
-    shortDesc: "Aplicación web corporativa para administración de mercancías desarrollada con la especificación Jakarta EE y desplegada en Tomcat.",
-    fullDesc: "Proyecto enfocado en los estándares de desarrollo Java para la web. Emplea Servlets como controladores HTTP, páginas JSP para renderizado dinámico del catálogo de inventario, manejo de sesiones y despliegue en servidor de aplicaciones Apache Tomcat.",
-    highlights: [
-      "Arquitectura MVC utilizando la especificación oficial de Jakarta EE",
-      "Manejo de peticiones HTTP, redirecciones y sesiones con Servlets",
-      "Vistas dinámicas con JavaServer Pages (JSP) y JSTL",
-      "Despliegue y configuración de servidor Apache Tomcat"
     ]
   }
 ];

@@ -16,8 +16,8 @@ export const skillGroups = [
     skills: [
       { name: "Node.js & Express", detail: "Servidores modulares, middlewares de seguridad, rutas desacopladas y controladores." },
       { name: "Java (POO & Patrón MVC)", detail: "Programación Orientada a Objetos, interfaces gráficas en JavaFX y arquitectura empresarial." },
-      { name: "Jakarta EE (Java EE)", detail: "Desarrollo web empresarial con Servlets, JSP y despliegue sobre Apache Tomcat." },
-      { name: "Autenticación, JWT & 2FA", detail: "Protección de endpoints, hashing con Bcrypt/Argon2 y verificación en dos pasos." }
+      { name: "Autenticación, JWT & 2FA", detail: "Protección de endpoints, hashing con Bcrypt/Argon2 y verificación en dos pasos." },
+      { name: "Arquitectura RESTful", detail: "Diseño de endpoints consistentes, códigos de estado HTTP y manejo centralizado de errores." }
     ]
   },
   {

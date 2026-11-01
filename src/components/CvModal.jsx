@@ -84,7 +84,7 @@ export default function CvModal({ isOpen, onClose }) {
           {/* Proyectos Destacados */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-3">
-              Proyectos Destacados en Producción
+              Proyectos Destacados
             </h4>
             <div className="space-y-2.5">
               <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
@@ -102,23 +102,16 @@ export default function CvModal({ isOpen, onClose }) {
               </div>
 
               <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <h5 className="font-semibold text-white text-xs">Eventos & Recordatorios — Gestor con Calendario</h5>
-                <p className="text-[11px] text-neutral-400 mt-0.5">
-                  React, FullCalendar, Chakra UI, Vite, LocalStorage.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                <h5 className="font-semibold text-white text-xs">Dev Learning Blog — Plataforma MERN</h5>
-                <p className="text-[11px] text-neutral-400 mt-0.5">
-                  MongoDB Atlas, Express, React, Node.js, Chakra UI, Sistema dinámico de comentarios.
-                </p>
-              </div>
-
-              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
                 <h5 className="font-semibold text-white text-xs">SuperKinal POS — Sistema de Inventario & Ventas</h5>
                 <p className="text-[11px] text-neutral-400 mt-0.5">
                   Java, JavaFX, Patrón MVC, MySQL, JDBC, JasperReports.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <h5 className="font-semibold text-white text-xs">COPEREX Interfer — Sistema de Registro de Socios & Stands</h5>
+                <p className="text-[11px] text-neutral-400 mt-0.5">
+                  Node.js, Express, MongoDB, Mongoose, JWT, Control de acceso por roles.
                 </p>
               </div>
             </div>
