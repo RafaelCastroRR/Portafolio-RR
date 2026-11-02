@@ -5,38 +5,39 @@ export default function CvModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div 
         className="bg-[#0f121a] border border-white/10 rounded-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl relative animate-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 sm:p-8 border-b border-white/10 flex items-start justify-between">
+        <div className="p-5 sm:p-8 border-b border-white/10 flex items-start justify-between gap-4">
           <div>
             <span className="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono text-sky-400 bg-sky-950/60 border border-sky-800/60 mb-2">
               CURRÍCULUM VITAE
             </span>
-            <h3 className="text-2xl font-bold text-white tracking-tight">Rafael Castro</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Rafael Castro</h3>
             <p className="text-xs text-neutral-400 font-mono mt-0.5">
               Desarrollador Full Stack & Frontend
             </p>
-            <div className="flex flex-wrap gap-4 mt-3 text-xs text-neutral-400">
-              <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neutral-500" /> Guatemala</span>
-              <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-neutral-500" /> +502 3632-3559</span>
-              <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5 text-neutral-500" /> rafaelcastro0605@gmail.com</span>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-neutral-400">
+              <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neutral-500 shrink-0" /> Guatemala</span>
+              <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-neutral-500 shrink-0" /> +502 3632-3559</span>
+              <span className="flex items-center gap-1.5 break-all"><Mail className="w-3.5 h-3.5 text-neutral-500 shrink-0" /> rafaelcastro0605@gmail.com</span>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 border border-white/5 transition"
+            className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-white/5 border border-white/5 transition shrink-0"
+            aria-label="Cerrar modal"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 sm:p-8 space-y-7 text-neutral-300 text-xs sm:text-sm font-normal">
+        <div className="p-5 sm:p-8 space-y-6 sm:space-y-7 text-neutral-300 text-xs sm:text-sm font-normal">
           {/* Perfil */}
           <div>
             <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
@@ -54,7 +55,7 @@ export default function CvModal({ isOpen, onClose }) {
             </h4>
             <div className="space-y-3">
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div>
                     <h5 className="font-semibold text-white">Perito en Informática (3 Años)</h5>
                     <p className="text-xs text-sky-400">Fundación Kinal</p>
@@ -67,7 +68,7 @@ export default function CvModal({ isOpen, onClose }) {
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <div>
                     <h5 className="font-semibold text-white">Middle Developer Front End JavaScript - React</h5>
                     <p className="text-xs text-emerald-400">Ada School</p>
@@ -137,16 +138,16 @@ export default function CvModal({ isOpen, onClose }) {
         </div>
 
         {/* Footer */}
-        <div className="p-5 border-t border-white/10 flex items-center justify-between">
+        <div className="p-4 sm:p-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <p className="text-[11px] text-neutral-500 font-mono">
             Actualizado • 2026
           </p>
           <button
             onClick={() => window.print()}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-neutral-950 bg-white hover:bg-neutral-200 transition"
+            className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold text-neutral-950 bg-white hover:bg-neutral-200 transition"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Imprimir / PDF</span>
+            <span>Imprimir / Guardar PDF</span>
           </button>
         </div>
       </div>

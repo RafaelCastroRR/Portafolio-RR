@@ -29,21 +29,23 @@ export default function Projects({ onSelectProject }) {
             </p>
           </div>
 
-          {/* Segmented Filter Control */}
-          <div className="flex flex-wrap gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/10 self-start md:self-auto">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                  filter === cat
-                    ? 'bg-white text-neutral-950 font-semibold shadow-sm'
-                    : 'text-neutral-400 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          {/* Segmented Filter Control with Horizontal Scroll for Mobile */}
+          <div className="w-full md:w-auto overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-white/[0.03] border border-white/10 min-w-max">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setFilter(cat)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all ${
+                    filter === cat
+                      ? 'bg-white text-neutral-950 font-semibold shadow-sm'
+                      : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -64,6 +66,7 @@ export default function Projects({ onSelectProject }) {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-transparent to-transparent" />
 

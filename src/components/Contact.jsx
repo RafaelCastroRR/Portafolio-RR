@@ -57,38 +57,38 @@ export default function Contact() {
           {/* Direct Channels */}
           <div className="lg:col-span-5 space-y-3">
             {/* Email Card */}
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sky-400">
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-sky-400 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-[11px] text-neutral-500 font-mono">Correo Electrónico</div>
-                  <div className="text-xs font-semibold text-white font-mono">{emailAddress}</div>
+                  <div className="text-xs font-semibold text-white font-mono break-all sm:break-normal">{emailAddress}</div>
                 </div>
               </div>
 
               <button
                 onClick={() => handleCopy(emailAddress, 'email')}
-                className="px-2.5 py-1 rounded text-[11px] font-medium bg-white/5 hover:bg-white/10 text-neutral-300 transition"
+                className="self-end sm:self-auto px-2.5 py-1 rounded text-[11px] font-medium bg-white/5 hover:bg-white/10 text-neutral-300 transition shrink-0"
               >
                 {copiedType === 'email' ? '¡Copiado!' : 'Copiar'}
               </button>
             </div>
 
             {/* Phone / WhatsApp Card */}
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-emerald-950/50 border border-emerald-800/50 flex items-center justify-center text-emerald-400">
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-9 h-9 rounded-lg bg-emerald-950/50 border border-emerald-800/50 flex items-center justify-center text-emerald-400 shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-[11px] text-neutral-500 font-mono">Teléfono / WhatsApp</div>
                   <div className="text-xs font-semibold text-white font-mono">{phoneFormatted}</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 self-end sm:self-auto shrink-0">
                 <button
                   onClick={() => handleCopy(phoneNumber, 'phone')}
                   className="px-2 py-1 rounded text-[11px] font-medium bg-white/5 hover:bg-white/10 text-neutral-300 transition"
@@ -108,12 +108,12 @@ export default function Contact() {
             </div>
 
             {/* Discord Card */}
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-indigo-950/50 border border-indigo-800/50 flex items-center justify-center text-indigo-400">
+            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-9 h-9 rounded-lg bg-indigo-950/50 border border-indigo-800/50 flex items-center justify-center text-indigo-400 shrink-0">
                   <MessageSquare className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-[11px] text-neutral-500 font-mono">Discord</div>
                   <div className="text-xs font-semibold text-white font-mono">{discordUser}</div>
                 </div>
@@ -121,7 +121,7 @@ export default function Contact() {
 
               <button
                 onClick={() => handleCopy(discordUser, 'discord')}
-                className="px-2.5 py-1 rounded text-[11px] font-medium bg-white/5 hover:bg-white/10 text-neutral-300 transition"
+                className="self-end sm:self-auto px-2.5 py-1 rounded text-[11px] font-medium bg-white/5 hover:bg-white/10 text-neutral-300 transition shrink-0"
               >
                 {copiedType === 'discord' ? '¡Copiado!' : 'Copiar'}
               </button>
@@ -134,25 +134,25 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center justify-between hover:bg-white/[0.04] transition group"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 shrink-0">
                   <GithubIcon className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-[11px] text-neutral-500 font-mono">GitHub</div>
                   <div className="text-xs font-semibold text-white font-mono">@RafaelCastroRR</div>
                 </div>
               </div>
 
-              <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition" />
+              <ArrowUpRight className="w-4 h-4 text-neutral-500 group-hover:text-white transition shrink-0" />
             </a>
 
             {/* Location Card */}
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/10 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400">
+              <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-400 shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <div className="text-[11px] text-neutral-500 font-mono">Ubicación</div>
                 <div className="text-xs font-semibold text-white font-mono">Guatemala 🇬🇹</div>
               </div>
@@ -160,7 +160,7 @@ export default function Contact() {
           </div>
 
           {/* Clean Message Form */}
-          <div className="lg:col-span-7 p-6 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/10">
+          <div className="lg:col-span-7 p-5 sm:p-7 rounded-2xl bg-white/[0.02] border border-white/10">
             <h3 className="text-base font-bold text-white mb-1">
               Enviar Mensaje
             </h3>
